@@ -1,5 +1,5 @@
 import json
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 
@@ -54,7 +54,7 @@ def main():
     data = load_counter()
 
     data["run_count"] += 1
-    data["last_run"] = datetime.now().astimezone().isoformat()
+    data["last_run"] = datetime.now(timezone.utc).isoformat()
 
     save_counter(data)
 
