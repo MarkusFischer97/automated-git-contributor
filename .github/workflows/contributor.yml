@@ -3,7 +3,7 @@ name: Automated Git Contributor
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 12 * * *"
+    - cron: "17 12 * * *"
 
 permissions:
   contents: write
